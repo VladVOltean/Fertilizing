@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1F2A80F4-05BC-4EC4-87B7-CDC13B012708}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>fertilizare</RootNamespace>
+    <AssemblyName>fertilizare</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=6.9.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Data_acces_Layer\AdaugaDate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Data_acces_Layer\AdaugaDate.Designer.cs">
+      <DependentUpon>AdaugaDate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Data_acces_Layer\AdaugaDozare.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Data_acces_Layer\AdaugaDozare.Designer.cs">
+      <DependentUpon>AdaugaDozare.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Data_acces_Layer\Confirmare.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Data_acces_Layer\Confirmare.Designer.cs">
+      <DependentUpon>Confirmare.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Data_acces_Layer\EditeazaDozari.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Data_acces_Layer\EditeazaDozari.Designer.cs">
+      <DependentUpon>EditeazaDozari.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Data_acces_Layer\Istoric_Stergere.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Data_acces_Layer\Istoric_Stergere.Designer.cs">
+      <DependentUpon>Istoric_Stergere.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Data_acces_Layer\StergeDate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Data_acces_Layer\StergeDate.Designer.cs">
+      <DependentUpon>StergeDate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Logic_Layer\Adau_Sterg_date.cs" />
+    <Compile Include="Logic_Layer\Dozare.cs" />
+    <Compile Include="Logic_Layer\Istoric_Sterge.cs" />
+    <Compile Include="Logic_Layer\Login.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Data_acces_Layer\AdaugaDate.resx">
+      <DependentUpon>AdaugaDate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data_acces_Layer\AdaugaDozare.resx">
+      <DependentUpon>AdaugaDozare.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data_acces_Layer\Confirmare.resx">
+      <DependentUpon>Confirmare.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data_acces_Layer\EditeazaDozari.resx">
+      <DependentUpon>EditeazaDozari.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data_acces_Layer\Istoric_Stergere.resx">
+      <DependentUpon>Istoric_Stergere.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data_acces_Layer\StergeDate.resx">
+      <DependentUpon>StergeDate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
